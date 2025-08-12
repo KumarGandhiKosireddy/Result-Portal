@@ -10,7 +10,7 @@ const Home = () => {
   }
   
   let getres=()=> {
-    axios.get(`http://localhost:5000/res/${hno}`).then((res)=>{
+    axios.get(`https://result-portal-3.onrender.com/res/${hno}`).then((res)=>{
         setData(res.data)
         setHno("")
     })
