@@ -1,0 +1,13 @@
+let express=require("express")
+const { addstd, getres, upload, gethal, updmarks, getstd, del } = require("../controller/uscont")
+const { reg, login, isLogin } = require("../controller/adcont")
+let rt=new express.Router()
+rt.post("/reg",upload.single('photo'),addstd)
+rt.get("/getstd",isLogin,getstd)
+rt.get("/res/:hno",getres)
+rt.get("/hal/:opt/:val",gethal)
+rt.put("/upd",isLogin,updmarks)
+rt.post("/adreg",reg)
+rt.post("/login",login)
+rt.delete("/del/:hno",isLogin,del)
+module.exports=rt
