@@ -1,4 +1,4 @@
-let bcrypt=require('bcrypt')
+let bcrypt=require('bcryptjs')
 const am = require('../model/admodel')
 let jwt=require("jsonwebtoken")
 let reg=async(req,res)=>{
