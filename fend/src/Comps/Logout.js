@@ -12,10 +12,10 @@ const Logout = () => {
     // Navigate after a brief delay to ensure state is cleared
     const timer = setTimeout(() => {
       navigate('/login')
-    }, 3000)
+    }, 3000)   
     
     return () => clearTimeout(timer)
-  },[]) // Remove dependencies to prevent infinite loop
+  },[obj, navigate]) // Include dependencies as they are stable references
   
   return (
     <div className="flex justify-center items-center min-h-[60vh]">
