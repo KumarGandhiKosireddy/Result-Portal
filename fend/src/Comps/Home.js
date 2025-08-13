@@ -10,7 +10,7 @@ const Home = () => {
   }
   
   let getres=()=> {
-    axios.get(`http://localhost:5000/res/${hno}`).then((res)=>{
+    axios.get(`https://result-portal-s9sp.onrender.com/res/${hno}`).then((res)=>{
         setData(res.data)
         setHno("")
     })
@@ -57,7 +57,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
             <div className="text-center">
               <img 
-                src={`http://localhost:5000/pic/${data.photo}`} 
+                src={`https://result-portal-s9sp.onrender.com/pic/${data.photo}`} 
                 alt="Student"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-gray-100"
               />

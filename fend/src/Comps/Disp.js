@@ -17,7 +17,7 @@ const Disp = () => {
   },[obj.store.token, navigate])
 
   useEffect(()=>{
-    axios.get("http://localhost:5000/getstd",{"headers":{"Authorization":obj.store.token}}).then((res)=>{
+    axios.get("https://result-portal-s9sp.onrender.com/getstd",{"headers":{"Authorization":obj.store.token}}).then((res)=>{
       setData(res.data)
     })
   },[f, obj.store.token])
@@ -29,7 +29,7 @@ const Disp = () => {
 
   let del=(hno)=>{
     if(window.confirm('Are you sure you want to delete this student?')) {
-      axios.delete(`http://localhost:5000/del/${hno}`,{"headers":{"Authorization":obj.store.token}}).then(()=>{
+      axios.delete(`https://result-portal-s9sp.onrender.com/del/${hno}`,{"headers":{"Authorization":obj.store.token}}).then(()=>{
         setF(!f)
       })
     }
