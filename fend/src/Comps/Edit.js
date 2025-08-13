@@ -20,7 +20,7 @@ const Edit = () => {
   }
 
   let upd=()=>{
-    axios.put("http://localhost:5000/upd",data,{"headers":{"Authorization":obj.store.token}}).then(()=>{
+    axios.put("https://result-portal-s9sp.onrender.com/upd",data,{"headers":{"Authorization":obj.store.token}}).then(()=>{
       navigate("/disp")
     })
   }
