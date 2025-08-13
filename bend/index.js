@@ -4,7 +4,7 @@ let cors=require("cors")
 const rt = require("./routes/rt");
 let bodyParser=require("body-parser")
 mongoose.connect("mongodb+srv://kumargandhi2k1:Kumar123@cluster0.pzqxbyy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") .then(()=>{
-    console.log("ok")
+    console.log("ok") 
 })
 let app=express()
 app.use(express.json()) 
