@@ -10,7 +10,7 @@ const Hal = () => {
   let fun1=(e)=>setVal(e.target.value)
   
   let gethal=()=>{
-    axios.get(`http://localhost:5000/hal/${opt}/${val}`).then((res)=>{
+    axios.get(`https://result-portal-s9sp.onrender.com/hal/${opt}/${val}`).then((res)=>{
       setData(res.data)
       setOpt("")
       setVal("")
@@ -94,7 +94,7 @@ const Hal = () => {
           <div className="card text-center">
             <div className="mb-6">
               <img 
-                src={`http://localhost:5000/pic/${data[0].photo}`}
+                src={`https://result-portal-s9sp.onrender.com/pic/${data[0].photo}`}
                 alt="Student"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-gray-100"
               />
