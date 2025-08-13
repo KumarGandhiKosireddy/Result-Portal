@@ -8,7 +8,11 @@ mongoose.connect("mongodb+srv://kumargandhi2k1:Kumar123@cluster0.pzqxbyy.mongodb
 })
 let app=express()
 app.use(express.json()) 
-app.use(cors())
+app.use(cors({
+    origin: "https://results-portal.netlify.app", // your frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 app.use(bodyParser.urlencoded({"extended":true}))
 app.use("/pic",express.static("./photos"))
 app.use("/",rt)
