@@ -14,7 +14,7 @@ const Login = () => {
   }
 
   let login=()=>{
-    axios.post("https://result-portal-3.onrender.com/login",data).then((res)=>{
+    axios.post("http://localhost:5000/login",data).then((res)=>{
       if(res.data.token!==undefined)
       {
         obj.updstore(res.data)

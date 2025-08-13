@@ -10,7 +10,7 @@ const Hal = () => {
   let fun1=(e)=>setVal(e.target.value)
   
   let gethal=()=>{
-    axios.get(`https://result-portal-3.onrender.com/hal/${opt}/${val}`).then((res)=>{
+    axios.get(`http://localhost:5000/hal/${opt}/${val}`).then((res)=>{
       setData(res.data)
       setOpt("")
       setVal("")

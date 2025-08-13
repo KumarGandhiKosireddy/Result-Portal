@@ -15,7 +15,7 @@ const Logout = () => {
     }, 3000)   
     
     return () => clearTimeout(timer)
-  },[obj, navigate]) // Include dependencies as they are stable references
+  },[]) // Include dependencies as they are stable references
   
   return (
     <div className="flex justify-center items-center min-h-[60vh]">

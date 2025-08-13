@@ -18,7 +18,7 @@ const Reg = () => {
     for(let p in data){
       fd.append(p,data[p])
     }
-    axios.post("https://result-portal-3.onrender.com/reg",fd).then((res)=>{
+    axios.post("http://localhost:5000/reg",fd).then((res)=>{
       if("msg" in res.data)
       {
         setMsg(res.data.msg)
